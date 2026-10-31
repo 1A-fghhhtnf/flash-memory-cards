@@ -20,6 +20,10 @@ def read(name: str) -> str:
 
 def read_bundled() -> str:
     path = SRC / "bundled-decks.js"
+    # bundled-decks.js 不入库：有 data/cet*.tsv 就按词表现场生成（四六级词汇题库）
+    if not path.exists() and (PROJECT / "data" / "cet4.tsv").exists():
+        import build_cet_decks  # 同目录脚本
+        build_cet_decks.generate()
     if not path.exists():
         return "window.MDReviewBundledDecks = null;"
     return path.read_text(encoding="utf-8")

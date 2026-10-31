@@ -167,7 +167,15 @@
       check('boot', !!app);
       check('home active', q('#view-home').classList.contains('active'));
       check('statbar rendered', q('#statBar').innerHTML.indexOf('全部卡片') >= 0);
-      check('no bundled decks in repo build', app.state().decks.filter(function (x) { return x.bundled; }).length === 0, app.state().decks.length);
+      var bundledDecks = app.state().decks.filter(function (x) { return x.bundled; });
+      check('bundled CET decks seeded', bundledDecks.length === 2 &&
+        bundledDecks[0].name.indexOf('四级') >= 0 && bundledDecks[1].name.indexOf('六级') >= 0,
+        bundledDecks.map(function (d) { return d.name + '=' + d.cards.length; }).join(','));
+      check('bundled cards count ok', bundledDecks.reduce(function (n, d) { return n + d.cards.length; }, 0) >= 800,
+        bundledDecks.reduce(function (n, d) { return n + d.cards.length; }, 0));
+      // 内置题库会占住首页，后续用例都从空状态开始：先清掉
+      app.state().decks = app.state().decks.filter(function (x) { return !x.bundled; });
+      app.renderHome();
       var baseDecks = app.state().decks.length;
       check('hero visible when empty', !q('#heroEmpty').classList.contains('hidden'));
 
