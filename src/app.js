@@ -83,8 +83,8 @@
       'settings.title': '设置', 'settings.general': '通用设置', 'settings.theme': '主题', 'settings.lang': '语言', 'settings.about': '关于',
       'theme.dark': '深色', 'theme.light': '浅色',
       'lang.zhHans': '简体中文', 'lang.zhHant': '繁體中文', 'lang.en': 'English',
-      'about.name': 'MD闪记卡', 'about.author': '作者：fest',
-      'about.feedback': '如有 bug 和建议反馈，可联系邮箱：<a href="mailto:fest1024@163.com">fest1024@163.com</a>',
+      'about.name': 'MD闪记卡', 'about.author': '作者：糯米小饭团',
+      'about.feedback': '如有 bug 和建议反馈，可联系邮箱：<a href="mailto:3249015899@qq.com">3249015899@qq.com</a>',
       'about.checkUpdate': '检查更新',
       'update.checking': '检查中…', 'update.latest': '已经是最新版本',
       'update.newTitle': '发现新版本 v{v}', 'update.newBody': '当前版本 v{cur}，是否前往更新？',
@@ -202,8 +202,8 @@
       'settings.title': '設定', 'settings.general': '一般設定', 'settings.theme': '主題', 'settings.lang': '語言', 'settings.about': '關於',
       'theme.dark': '深色', 'theme.light': '淺色',
       'lang.zhHans': '简体中文', 'lang.zhHant': '繁體中文', 'lang.en': 'English',
-      'about.name': 'MD閃記卡', 'about.author': '作者：fest',
-      'about.feedback': '如有 bug 和建議回饋，可聯絡郵箱：<a href="mailto:fest1024@163.com">fest1024@163.com</a>',
+      'about.name': 'MD閃記卡', 'about.author': '作者：糯米小飯糰',
+      'about.feedback': '如有 bug 和建議回饋，可聯絡郵箱：<a href="mailto:3249015899@qq.com">3249015899@qq.com</a>',
       'about.checkUpdate': '檢查更新',
       'update.checking': '檢查中…', 'update.latest': '已經是最新版本',
       'update.newTitle': '發現新版本 v{v}', 'update.newBody': '當前版本 v{cur}，是否前往更新？',
@@ -321,8 +321,8 @@
       'settings.title': 'Settings', 'settings.general': 'General', 'settings.theme': 'Theme', 'settings.lang': 'Language', 'settings.about': 'About',
       'theme.dark': 'Dark', 'theme.light': 'Light',
       'lang.zhHans': '简体中文', 'lang.zhHant': '繁體中文', 'lang.en': 'English',
-      'about.name': 'MD闪记卡', 'about.author': 'Author: fest',
-      'about.feedback': 'Bugs & suggestions: <a href="mailto:fest1024@163.com">fest1024@163.com</a>',
+      'about.name': 'MD闪记卡', 'about.author': 'Author: 糯米小饭团',
+      'about.feedback': 'Bugs & suggestions: <a href="mailto:3249015899@qq.com">3249015899@qq.com</a>',
       'about.checkUpdate': 'Check for updates',
       'update.checking': 'Checking…', 'update.latest': 'You are up to date',
       'update.newTitle': 'New version v{v} available', 'update.newBody': 'Current version is v{cur}. Update now?',
@@ -2010,16 +2010,16 @@
 
   /* ---------- 检查更新（读仓库根目录的 latest.json，经 jsDelivr CDN，带 CORS） ---------- */
   var UPDATE_JSON_URLS = [
-    'https://fastly.jsdelivr.net/gh/fest77/flash-memory-cards@main/latest.json',
-    'https://gcore.jsdelivr.net/gh/fest77/flash-memory-cards@main/latest.json',
-    'https://testingcf.jsdelivr.net/gh/fest77/flash-memory-cards@main/latest.json',
-    'https://cdn.jsdelivr.net/gh/fest77/flash-memory-cards@main/latest.json',
-    'https://raw.githubusercontent.com/fest77/flash-memory-cards/main/latest.json',
+    'https://fastly.jsdelivr.net/gh/1A-fghhhtnf/flash-memory-cards@main/latest.json',
+    'https://gcore.jsdelivr.net/gh/1A-fghhhtnf/flash-memory-cards@main/latest.json',
+    'https://testingcf.jsdelivr.net/gh/1A-fghhhtnf/flash-memory-cards@main/latest.json',
+    'https://cdn.jsdelivr.net/gh/1A-fghhhtnf/flash-memory-cards@main/latest.json',
+    'https://raw.githubusercontent.com/1A-fghhhtnf/flash-memory-cards/main/latest.json',
     // Gitee 的 raw 地址不返回 Access-Control-Allow-Origin，浏览器里必被 CORS 拦掉；
     // 只有 API v5 的 contents 端点带 ACAO:*，所以兜底走 API 并解 base64。
-    'https://gitee.com/api/v5/repos/festeel/flash-memory-cards/contents/latest.json?ref=main'
+    'https://gitee.com/api/v5/repos/Rice0417/flash-memory-cards/contents/latest.json?ref=main'
   ];
-  var RELEASES_URL = 'https://gitee.com/festeel/flash-memory-cards/releases';
+  var RELEASES_URL = 'https://gitee.com/Rice0417/flash-memory-cards/releases';
 
   function compareVer(a, b) {
     var pa = String(a || '').replace(/^v/i, '').split('.');
